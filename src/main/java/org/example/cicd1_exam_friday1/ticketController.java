@@ -7,7 +7,7 @@ import org.example.cicd1_exam_friday1.ticketService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import net.URI;
+import java.net.URI;
 
 import java.net.URI;
 import java.security.Provider;
@@ -18,10 +18,10 @@ import java.util.Optional;
 @RequestMapping("/api/ticket")
 
 public class ticketController {
-    private final ticketController ticketController;
+    private final org.example.cicd1_exam_friday1.ticketService ticketController;
 
-    public ticketController(ticketController ticketController) {
-        this.ticketController = ticketController;
+    public ticketController(org.example.cicd1_exam_friday1.ticketService service) {
+        this.service =service;
     }
 
 
@@ -31,7 +31,7 @@ public  ResponseEntity<List<ticket>> getALL(){return ResponseEntity.ok(org.examp
 @GetMapping("/{id}")
 public ResponseEntity <ticket> getOne(@PathVariable String id){
 
-    Optional( <ticket>maybe = Service.findById(id););
+    new Optional( <ticket>maybe = Service.findById(id););
     if(maybe.isPresent()){
         return ResponseEntity.ok(maybe.get());
     }

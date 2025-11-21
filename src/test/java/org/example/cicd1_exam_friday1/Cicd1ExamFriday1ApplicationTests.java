@@ -8,6 +8,8 @@ class Cicd1ExamFriday1ApplicationTests {
 
     @Test
     void contextLoads() {
+        new ticket();
+
     }
 
 }
